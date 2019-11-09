@@ -1,0 +1,321 @@
+/*
+Theme Name: theme-wp
+Author: Queseo
+Author URI: http://queseo.es/
+Description: My first responsive HTML5 theme
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/*relleno interior de los bloques*/
+* {
+  box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+
+
+}
+/*Background*/
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+
+}
+
+/*****************************************************************/
+/*****************************CABECERA****************************/
+/*****************************************************************/
+
+
+/*centrar header*/
+.my-logo {
+  vertical-align: middle;
+  text-align: center; /* requerido para alineación horizontal */
+  background-color: #333;
+}
+
+.cont_head span{
+  float:right;
+  height: 48px;
+  padding: 5px 20px 5px 20px;
+  font-size:30px;
+  background-color: #4CAF50;
+}
+
+
+.cont_head span a{
+  color:white;
+}
+
+/*****************************************************************/
+/*******************************MENU******************************/
+/*****************************************************************/
+
+.menu {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  list-style:none;
+}
+
+.menu li {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-right: 1px solid white;
+}
+
+
+.menu li:hover {
+  background-color: #4CAF50;
+}
+
+.menu li:hover a {
+  color: white;
+}
+
+.menu li a {
+  color: #f2f2f2;
+}
+
+.current-menu-item {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+.sub-menu{
+  display:none;
+  position: absolute;
+  left: 0px;
+  margin-top: 14px;
+  width: 200px;
+  background-color: #333;
+}
+.sub-menu li{
+  width:100%;
+}
+
+.menu li:hover .sub-menu{
+  display:block;
+}
+@media all and (max-width: 500px) {
+
+  header, .menu{
+    flex-wrap: wrap;
+  }
+  .cont_head span{
+  float: none;
+}
+  .menu  li {
+    flex-basis: 100%;
+  }
+
+}
+
+
+/*****************************************************************/
+/*****************************END MENU****************************/
+/*****************************************************************/
+
+/*****************************************************************/
+/***************************END CABECERA**************************/
+/*****************************************************************/
+
+
+
+
+/*****************************************************************/
+/*****************************CONTENIDO***************************/
+/*****************************************************************/
+
+/*****************************************************************/
+/******************************TITULOS****************************/
+/*****************************************************************/
+h1{
+	    font-size: 65px;
+	    line-height: 80px;
+	    text-align: center;
+}
+h1, h2, h3{
+    font-weight: bold;
+    margin: auto;
+}
+
+h2, h2 a{
+    font-size: 55px;
+    line-height: 46px;
+	    text-align: center;
+}
+
+h3, h4, h5, h6{
+	text-align: left;
+}
+h3{
+    font-size: 30px;
+    line-height: 29px;
+}
+
+h4{    font-size: 25px;
+}
+h5{    font-size: 20px;
+}
+h6{    font-size: 15px;
+}
+
+/*****************************************************************/
+/***************************END TITULOS***************************/
+/*****************************************************************/
+
+.content-area{
+  display: flex;
+  padding: 0 5% 0 5%;
+  margin-bottom: 30px;
+}
+
+.article-loop{
+  flex-wrap: wrap;
+  flex-basis: 33%;
+  background-color: #e5e5e5;
+}
+.article-loop h2{
+  color: #4CAF50;
+  background-color: #333;
+  margin-bottom: 10px;
+  padding: 20px 0 20px 0;
+}
+.article-loop h2 a{
+  color: #4CAF50;
+  text-decoration: none;
+  line-height: 55px;
+}
+
+.article-loop:hover h2 a{
+  color: white;
+  text-decoration: none;
+}
+
+.article-loop p{
+margin-top: 10px;
+}
+
+img.attachment-medium.size-medium.wp-post-image{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media all and (max-width: 500px) {
+
+  .content-area{
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
+  .article-loop{
+  flex-basis: 100%;
+}
+
+}
+
+/*****************************************************************/
+/***************************END CONTENIDO*************************/
+/*****************************************************************/
+
+
+/*****************************************************************/
+/****************************PRE FOOTER***************************/
+/*****************************************************************/
+.widget-footer{
+  padding-bottom: 60px;
+  padding-top: 45px;
+  background-color:#2B315E;
+  color: #fff;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.widget-footer .container{
+  margin: 0 auto;
+  display: flex;
+}
+.widget-footer .container div{
+    flex-wrap: wrap;
+
+    margin: auto;
+}
+
+.container:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+@media all and (max-width: 1200px) {
+  .widget-footer{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media all and (max-width: 730px) {
+  .widget-footer{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media all and (max-width: 683px) {
+  .widget-footer .container div{
+      flex-basis: 100%;
+  }
+  .widget-footer .container{
+      flex-wrap: wrap;
+      padding: 0 25% 0 25%;
+  }
+}
+
+/*****************************************************************/
+/**************************END PRE FOOTER*************************/
+/*****************************************************************/
+
+
+/*****************************************************************/
+/******************************FOOTER*****************************/
+/*****************************************************************/
+footer {
+  width: 100%;
+  padding-left: 1%;
+  background-color: #333;
+  vertical-align: middle;
+  text-align: center; /* requerido para alineación horizontal */
+  min-height:40px;
+}
+
+footer div{
+  display: inline-block;
+  margin: 30px 0 30px 0;
+
+}
+
+@media all and (max-width: 683px) {
+
+  footer .menu{
+    flex-wrap: wrap;
+  }
+
+  footer .menu  li {
+    flex-basis: 100%;
+  }
+
+}
+/*****************************************************************/
+/****************************END FOOTER***************************/
+/*****************************************************************/
+
